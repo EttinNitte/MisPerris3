@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FormularioPerris',
-    'Materialize'
 ]
 
 MIDDLEWARE = [
