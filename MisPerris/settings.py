@@ -25,7 +25,7 @@ SECRET_KEY = '&a5ro-wvqq#7mk27*%8kfu1&_=(ujvl-=d#zw9q8%9avv!hxvk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ettin20.pythonanywhere.com']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FormularioPerris',
+    'Materialize'
 ]
 
 MIDDLEWARE = [
