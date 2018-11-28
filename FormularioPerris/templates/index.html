@@ -21,12 +21,13 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper teal">
-                <a href="index.html"> <img src="{% static 'img/logo.png' %}" alt="Logo Mis Perris"> </a>
+                <a href="index"> <img src="{% static 'img/logo.png' %}" alt="Logo Mis Perris"> </a>
                 <ul id="nav-mobile" class="hide-on-med-and-down right">
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Quienes Somos</a></li>
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Contáctenos</a></li>
+                    <li><a href="#">{{pais}} {{region}} {{ciudad}}</a></li>
                 </ul>
             </div>
         </nav>
@@ -272,10 +273,23 @@
 
 
     </div>
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
 
-
-    <footer id="credits">
-        <p>Desarrollo Web y Mobile git</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <p>Latitud: {{latitud}} Longitud: {{longitud}}</p>
+                    <p>IP: {{ip}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Desarrollo Web y Mobile DuocUC
+            </div>
+        </div>
     </footer>
 
     <div class="fixed-action-btn">
