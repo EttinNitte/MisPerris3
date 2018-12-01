@@ -320,7 +320,7 @@
 
                 <div class="input-field">
                     <label for="nombre">Nombre Completo:</label>
-                    <input type="text" class="validate" name="nombre" placeholder="Ingrese Nombre Completo" size="20" pattern="[A-Za-z]+" required="" aria-required="true" />
+                    <input type="text" class="validate" name="nombre" placeholder="Ingrese Nombre Completo" size="20" pattern="^[a-zA-Z ]*$" required="" aria-required="true" />
                     <span class="helper-text" data-error="Nombre no valido" data-success=""></span>
                 </div>
 
@@ -334,7 +334,7 @@
                     <div class="col s12 m6" class="input-field">
                         <i class="tiny material-icons prefix">phone</i>
                         <label for="telefono">Telefono de Contacto:</label>
-                        <input type="number" name="telefono" min="1000000" placeholder="Ingrese Telefono de Contacto" class="validate" size="20" required />
+                        <input type="number" name="telefono" min="1000000" max="999999999999" placeholder="Ingrese Telefono de Contacto" class="validate" size="20" required />
                         <span class="helper-text" data-error="Numero de telefono muy corto" data-success=""></span>
                     </div>
                 </div>
@@ -364,7 +364,7 @@
 							<option value="2">Casa con patio pequeño</option>
 							<option value="3">Casa sin patio</option>
 							<option value="4">Departamento</option>
-						</select>
+					</select>
                     <label>Tipo Vivienda</label>
                     <span class="helper-text" data-error="Seleccione tipo vivienda" data-success=""></span>
                 </div>

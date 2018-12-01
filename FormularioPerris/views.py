@@ -6,7 +6,7 @@ from  .models import Adoptante
 # Create your views here.
 
 def index(request):
-    response = requests.get('http://api.ipstack.com/200.14.248.139?access_key=ed45289eb6aa84378442d6c312320945')
+    response = requests.get('http://api.ipstack.com/check?access_key=ed45289eb6aa84378442d6c312320945')
     data = response.json()
     correo = request.POST.get('correo', 0)
     rut = request.POST.get('rut',0)
