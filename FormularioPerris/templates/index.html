@@ -288,7 +288,9 @@
         <div class="footer-copyright">
             <div class="container">
                 © 2018 Desarrollo Web y Mobile DuocUC
+                <p id="mostrar"> </p>
             </div>
+
         </div>
     </footer>
 
@@ -305,7 +307,7 @@
 					</span>
             </div>
 
-            <form id="formulario_mascotas" name="formulario_mascotas" method="POST" action="">
+            <form id="formulario_mascotas" name="formulario_mascotas" method="POST" action="">{% csrf_token %}
                 {% csrf_token %}
                 <div class="input-field">
                     <label for="correo">Correo Electornico:</label>
@@ -380,8 +382,7 @@
 
         <script type="text/javascript " src="{% static 'js/validarRUT.js' %} "></script>
         <script type="text/javascript "src="{% static 'js/validarFecha.js' %} "></script>
-        <script type="text/javascript "src="{% static 'js/llenarComuna.js' %} "></script>
-        <script src="{% static 'js/regioncomuna.js' %} "></script>
+        <script src="{% static 'js/regionComuna.js' %} "></script>
 
         <script>
 			$(document).ready(function(){
@@ -396,7 +397,10 @@
 			$(document).ready(function(){
 			$('select').formSelect();
 			}); 
-        
+            $(document).change(function(){
+			$('select').formSelect();
+			});
+                                
             $(document).ready(function(){
             $('.sidenav').sidenav();
             });
