@@ -305,8 +305,8 @@
 					</span>
             </div>
 
-            <form id="formulario_mascotas" name="formulario_mascotas" method="get" action="">
-
+            <form id="formulario_mascotas" name="formulario_mascotas" method="POST" action="">
+                {% csrf_token %}
                 <div class="input-field">
                     <label for="correo">Correo Electornico:</label>
                     <input type="email" class="validate" name="correo" placeholder="Ingrese Direccion de Correo Electronico" class="required" size="20" required="" aria-required="true" />
@@ -339,21 +339,19 @@
 
                 <div class="row">
                     <div class="col s12 m6">
-                        <!--div class="input-field ">
+                        <div class="input-field ">
                             <select id="regiones" required></select>
                             <label>Region</label>
-                            <span class="helper-text" data-error="Seleccione Region" data-success=""></span>
-                        </div-->
-                        <select id="regiones"></select>
-                        <select id="comunas"></select>
+                            <span class="helper-text" data-error="Seleccione Region" onchange="llenarComuna()" data-success=""></span>
+                        </div>
 
                     </div>
                     <div class="col s12 m6">
-                        <!--div class="input-field">
+                        <div class="input-field">
                             <select id="comunas" name="comunas" required></select>
                             <label>Comuna</label>
                             <span class="helper-text" data-error="Seleccione Comuna" data-success=""></span>
-                        </div-->
+                        </div>
                     </div>
                 </div>
 
@@ -370,19 +368,20 @@
                 </div>
 
                 <div class="imput-field">
-                    <button class=" waves-effect waves-green btn" name="boton" type="submit"><i class="material-icons right " >send</i>Enviar</a>
+                    <button class=" waves-effect waves-green btn" name="boton" type="submit" value="OK"><i class="material-icons right " >send</i>Enviar</a>
                 </div>
 			</form>
 		</div>        
     </div> <!--Formulario de postulacion -->
         
       <!--JavaScript at end of body for optimized loading-->
-        <script type="text/javascript " src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
-        <script type="text/javascript " src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
-        <script type="text/javascript " src="{% static 'js/materialize.min.js' %} "></script>
-        <script type="text/javascript " src="{% static 'js/jquery.regioncomuna.js' %} "></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
         <script type="text/javascript " src="{% static 'js/validarRUT.js' %} "></script>
         <script type="text/javascript "src="{% static 'js/validarFecha.js' %} "></script>
+        <script type="text/javascript "src="{% static 'js/llenarComuna.js' %} "></script>
+        <script src="{% static 'js/regioncomuna.js' %} "></script>
 
         <script>
 			$(document).ready(function(){
